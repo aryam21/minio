@@ -31,8 +31,8 @@ deploy:
       vault: MINIO_ACCESS_KEY
     MINIO_SECRET_KEY:
       vault: MINIO_SECRET_KEY
-    MINIO_KMS_AUTO_ENCRYPTION: "on"
-    MINIO_BROWSER: "off"
+   # MINIO_KMS_AUTO_ENCRYPTION: "on"
+    #MINIO_BROWSER: "off"
     public.crt:
       vault: public.crt
     private.key:
