@@ -19,11 +19,11 @@ deploy:
     - 9001
   volumes:
     - claim: minio-data
-      mount: /data
+      mount: appz/data
       name: data
       size: 561
     - claim: minio-backup
-      mount: /backup
+      mount: appz/backup
       name: backup
       size: 561
   properties:
