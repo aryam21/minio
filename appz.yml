@@ -37,4 +37,4 @@ deploy:
       vault: public.crt
     private.key:
       vault: private.key
-revision: 0
+revision: 1
