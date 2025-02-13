@@ -14,6 +14,7 @@ deploy:
   replicas: 1
   port: 
     - 9000
+    - 9001
 volumes:
 - claim: minio-data
   mount: /appz/data
@@ -26,4 +27,4 @@ volumes:
 properties: 
   MINIO_ROOT_PASSWORD: 
     vault: MINIO_ROOT_PASSWORD
-  revision: 0
+  revision: 1
