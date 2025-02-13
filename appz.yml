@@ -1,40 +1,30 @@
-app:
+app: 
   code: MINIO
   name: minio
-  notify: aramanan@ecloudcontrol.com 
-
-build:
-  build file: none
+  notify: aramanan@ecloudcontrol.com
+build: 
+  build_file: none
   env: DEV
-  image template: minio-2.0 
-  output files: output/*.zip
-  version: 2.0
-
-deploy:
+  image_template: minio-1.0
+  output_files: output/*.zip
+  version: 1.0
+deploy: 
   context: aryam21/DEV
   type: statefulset
   replicas: 1
-  port:
+  port: 
     - 9000
-    - 9001
-  volumes:
-    - claim: minio-data
-      mount: appz/data
-      name: data
-      size: 561
-    - claim: minio-backup
-      mount: appz/backup
-      name: backup
-      size: 561
-  properties:
-    MINIO_ACCESS_KEY:
-      vault: MINIO_ACCESS_KEY
-    MINIO_SECRET_KEY:
-      vault: MINIO_SECRET_KEY
-   # MINIO_KMS_AUTO_ENCRYPTION: "on"
-    #MINIO_BROWSER: "off"
-    public.crt:
-      vault: public.crt
-    private.key:
-      vault: private.key
-revision: 1
+volumes:
+- claim: minio-data
+  mount: /appz/data
+  name: data
+  size: 5Gi
+- claim: minio-backup
+  mount: /appz/backup
+  name: backup
+  size: 5Gi
+properties: 
+  MINIO_ROOT_PASSWORD: 
+    vault: MINIO_ROOT_PASSWORD
+  MINIO_ROOT_USER: minioadmin
+  revision: 0
