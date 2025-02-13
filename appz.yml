@@ -26,6 +26,7 @@ volumes:
   size: 5Gi
 properties: 
   MINIO_ROOT_USER: minioadmin
+  MINIO_BROWSER: "on"
   MINIO_ROOT_PASSWORD: 
     vault: MINIO_ROOT_PASSWORD
   revision: 2
