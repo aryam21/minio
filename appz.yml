@@ -27,7 +27,8 @@ volumes:
 properties: 
   MINIO_ROOT_USER: minioadmin
   MINIO_KMS_KES_KEY_NAME: "minio-backend-default-key"
+  MINIO_KMS_KES_API_KEY: "kes:v1:ACTpAsNoaGf2Ow9o5gU8OmcaG6Af/VcZ1Mt7ysuKoBjv"
   MINIO_BROWSER: "on"
   MINIO_ROOT_PASSWORD: 
     vault: MINIO_ROOT_PASSWORD
-  revision: 3
+  revision: 4
