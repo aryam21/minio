@@ -26,11 +26,12 @@ volumes:
   size: 5Gi
 properties: 
   MINIO_ROOT_USER: minioadmin
-  MINIO_KMS_KES_KEY_NAME: "minio-backend-default-key"
-  #MINIO_KMS_KES_API_KEY: "ACTpAsNoaGf2Ow9o5gU8OmcaG6Af/VcZ1Mt7ysuKoBjv"
-  MINIO_KMS_KES_API_KEY: 
-    vault: MINIO_KMS_KES_API_KEY
+  MINIO_KMS_AUTO_ENCRYPTION: "on"
   MINIO_BROWSER: "on"
+  MINIO_KMS_KES_KEY_NAME: "global-key"
+  #MINIO_KMS_KES_API_KEY: "ACTpAsNoaGf2Ow9o5gU8OmcaG6Af/VcZ1Mt7ysuKoBjv"
+  MINIO_SECRET_KEY: 
+    vault: MINIO_SECRET_KEY
   MINIO_ROOT_PASSWORD: 
     vault: MINIO_ROOT_PASSWORD
   revision: 4
