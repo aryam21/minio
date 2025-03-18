@@ -20,7 +20,7 @@ volumes:
   mount: /appz/data
   name: minio-pv
   size: 5Gi
-  mode: ReadWriteMany
+  mode: ReadWriteOnce
   class: ""
   volumeName: minio-pv
   matchLabels: false
@@ -35,4 +35,4 @@ properties:
     vault: MINIO_SECRET_KEY
   MINIO_ROOT_PASSWORD: 
     vault: MINIO_ROOT_PASSWORD
-  revision: 8
+  revision: 9
