@@ -16,14 +16,15 @@ deploy:
     - 9000
     - 9001
 volumes:
-- claim: minio-data
+- claim: minio-pvc
   mount: /appz/data
-  name: data
+  name: minio-pv
   size: 5Gi
-- claim: minio-backup
-  mount: /appz/backup
-  name: backup
-  size: 5Gi
+  mode: ReadWriteMany
+  class: ""
+  volumeName: minio-pv
+  matchLabels: false
+
 properties: 
   MINIO_ROOT_USER: minioadmin
   MINIO_KMS_AUTO_ENCRYPTION: "on"
