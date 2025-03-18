@@ -16,7 +16,7 @@ deploy:
     - 9000
     - 9001
 volumes:
-- claim: minio-pvc
+- claim: minio-pv-minio-2-0-0
   mount: /appz/data
   name: minio-pv
   size: 5Gi
