@@ -35,4 +35,4 @@ properties:
     vault: MINIO_SECRET_KEY
   MINIO_ROOT_PASSWORD: 
     vault: MINIO_ROOT_PASSWORD
-  revision: 14
+  revision: 15
